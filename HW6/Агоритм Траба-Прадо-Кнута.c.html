@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>main.c</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bbb529;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #cc7832;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.c</font>
+</center></td></tr></table>
+<pre><span class="s0">#include </span><span class="s2">&lt;stdio.h&gt;</span>
+<span class="s0">#include </span><span class="s2">&lt;math.h&gt;</span>
+
+<span class="s3">/* f(x) = sqrt(|x|) + 5*x**3 */</span>
+<span class="s4">double </span><span class="s1">f (</span><span class="s4">double </span><span class="s1">x) {</span>
+    <span class="s4">return </span><span class="s1">(sqrt(fabs(x)) + </span><span class="s5">5.0</span><span class="s1">*pow(x</span><span class="s4">,</span><span class="s5">3.0</span><span class="s1">))</span><span class="s4">;</span>
+<span class="s1">}</span>
+
+<span class="s4">int </span><span class="s1">main (</span><span class="s4">int </span><span class="s1">argc</span><span class="s4">, char</span><span class="s1">* argv[]) {</span>
+<span class="s4">double </span><span class="s1">A [</span><span class="s5">11</span><span class="s1">]</span><span class="s4">, </span><span class="s1">y</span><span class="s4">;</span>
+<span class="s4">int </span><span class="s1">i</span><span class="s4">;</span>
+
+<span class="s3">// Чтение в значениях массива A</span>
+<span class="s4">for </span><span class="s1">(i=</span><span class="s5">0</span><span class="s4">; </span><span class="s1">i&lt;</span><span class="s5">11</span><span class="s4">; </span><span class="s1">i++) {</span>
+<span class="s1">scanf (</span><span class="s2">&quot;%lf&quot;</span><span class="s4">, </span><span class="s1">&amp;A[i])</span><span class="s4">;</span>
+<span class="s1">}</span>
+
+<span class="s3">//В обратном порядке применяем &quot;f&quot; к каждому элементу A и выводим на печать </span>
+    <span class="s4">for </span><span class="s1">(i=</span><span class="s5">10</span><span class="s4">; </span><span class="s1">i&gt;=</span><span class="s5">0</span><span class="s4">; </span><span class="s1">i--) {</span>
+        <span class="s1">y = f (A[i])</span><span class="s4">;</span>
+    <span class="s4">if </span><span class="s1">(y &gt; </span><span class="s5">400.0</span><span class="s1">) {</span>
+        <span class="s1">printf (</span><span class="s2">&quot;%d TOO LARGE</span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s4">, </span><span class="s1">i)</span><span class="s4">;</span>
+                    <span class="s1">} </span>
+        <span class="s4">else </span><span class="s1">{</span>
+        <span class="s1">printf (</span><span class="s2">&quot;%d %f</span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s4">, </span><span class="s1">i</span><span class="s4">, </span><span class="s1">y)</span><span class="s4">;</span>
+             <span class="s1">}</span>
+                           <span class="s1">}</span>
+         <span class="s4">return </span><span class="s1">(</span><span class="s5">0</span><span class="s1">)</span><span class="s4">;</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
