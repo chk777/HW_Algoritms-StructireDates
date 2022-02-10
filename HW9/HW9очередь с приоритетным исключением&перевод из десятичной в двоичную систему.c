@@ -86,4 +86,19 @@ int main() {
   printf("После удаления элемента: ");
 
   printArray(array, size);
+  
+  //Перевод из десятичной в двоичную систему
+  printf("Enter number: ");
+  
+  int n, new_n = 0;
+  scanf("%d", &n);
+  fflush(stdin);
+  while(n)
+    {
+    new_n *= 10;
+    new_n += n % 10;
+    n /= 10;
+    }
+   printf("Result: %d", new_n);
+   getchar();
 }
