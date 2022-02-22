@@ -85,12 +85,11 @@ struct Graph* crGraph(int vs)
 
 void addEdge(struct Graph* graph, int src, int dest)
 {
-    // Add edge from src to dest
+
     struct node* newNode = crNode(dest);
     newNode->next = graph->Lists[src];
     graph->Lists[src] = newNode;
 
-    // Add edge from dest to src
     newNode = crNode(src);
     newNode->next = graph->Lists[dest];
     graph->Lists[dest] = newNode;
